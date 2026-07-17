@@ -24,4 +24,11 @@ app.listen(PORT,()=>{
     console.log(
       `FoodJet rodando na porta ${PORT}`
     );
-});
+});const authRoutes =
+require("./auth/auth.routes");
+
+
+app.use(
+"/api/auth",
+authRoutes
+);
