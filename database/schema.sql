@@ -191,4 +191,16 @@ CREATE TABLE admin_config (
 
     criado_em TIMESTAMP DEFAULT NOW()
 
+);CREATE TABLE pedido_itens (
+
+    id SERIAL PRIMARY KEY,
+
+    pedido_id INTEGER REFERENCES pedidos(id),
+
+    produto_id INTEGER REFERENCES produtos(id),
+
+    quantidade INTEGER,
+
+    preco DECIMAL(10,2)
+
 );
