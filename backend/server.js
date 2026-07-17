@@ -31,4 +31,11 @@ require("./auth/auth.routes");
 app.use(
 "/api/auth",
 authRoutes
+);const adminRoutes =
+require("./admin/admin.routes");
+
+
+app.use(
+"/api/admin",
+adminRoutes
 );
