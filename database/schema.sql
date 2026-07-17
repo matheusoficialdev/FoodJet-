@@ -173,4 +173,22 @@ CREATE TABLE admin_config (
 
     acesso_total BOOLEAN DEFAULT true
 
+);CREATE TABLE pedidos (
+
+    id SERIAL PRIMARY KEY,
+
+    cliente_id INTEGER REFERENCES usuarios(id),
+
+    restaurante_id INTEGER REFERENCES restaurantes(id),
+
+    status VARCHAR(50) DEFAULT 'AGUARDANDO',
+
+    valor_total DECIMAL(10,2),
+
+    forma_pagamento VARCHAR(30),
+
+    endereco_entrega TEXT,
+
+    criado_em TIMESTAMP DEFAULT NOW()
+
 );
