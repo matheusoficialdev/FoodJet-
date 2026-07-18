@@ -201,6 +201,20 @@ CREATE TABLE admin_config (
 
     quantidade INTEGER,
 
-    preco DECIMAL(10,2)
+    preco DECIMAL(10,2)   
+    
+    CREATE TABLE localizacoes_entregadores (
+
+    id SERIAL PRIMARY KEY,
+
+    entregador_id INTEGER REFERENCES usuarios(id),
+
+    latitude DECIMAL(10,8),
+
+    longitude DECIMAL(11,8),
+
+    atualizado_em TIMESTAMP DEFAULT NOW()
+
+);
 
 );
