@@ -49,3 +49,12 @@ status
 
 module.exports =
 new OrderService();
+const {
+getIO
+}
+=
+require("../../websocket/socket");
+
+
+const EVENTS =
+require("../../websocket/events");
