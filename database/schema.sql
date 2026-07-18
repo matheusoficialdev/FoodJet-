@@ -216,5 +216,23 @@ CREATE TABLE admin_config (
     atualizado_em TIMESTAMP DEFAULT NOW()
 
 );
+CREATE TABLE pagamentos (
 
+    id SERIAL PRIMARY KEY,
+
+    pedido_id INTEGER REFERENCES pedidos(id),
+
+    cliente_id INTEGER REFERENCES usuarios(id),
+
+    valor DECIMAL(10,2),
+
+    metodo VARCHAR(30),
+
+    status VARCHAR(30) DEFAULT 'PENDENTE',
+
+    transacao_id VARCHAR(100),
+
+    criado_em TIMESTAMP DEFAULT NOW()
+
+);
 );
