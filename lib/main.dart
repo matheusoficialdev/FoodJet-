@@ -22,3 +22,5 @@ class FoodJetApp extends StatelessWidget {
     );
   }
 }
+import 'package:provider/provider.dart';
+import 'providers/cart_provider.dart';
