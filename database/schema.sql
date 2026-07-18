@@ -233,6 +233,21 @@ CREATE TABLE pagamentos (
     transacao_id VARCHAR(100),
 
     criado_em TIMESTAMP DEFAULT NOW()
-
+  
 );
+);
+CREATE TABLE notificacoes (
+
+    id SERIAL PRIMARY KEY,
+
+    usuario_id INTEGER REFERENCES usuarios(id),
+
+    titulo VARCHAR(100),
+
+    mensagem TEXT,
+
+    lida BOOLEAN DEFAULT false,
+
+    criado_em TIMESTAMP DEFAULT NOW()
+
 );
