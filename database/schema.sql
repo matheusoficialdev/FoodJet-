@@ -251,3 +251,21 @@ CREATE TABLE notificacoes (
     criado_em TIMESTAMP DEFAULT NOW()
 
 );
+
+CREATE TABLE avaliacoes (
+
+    id SERIAL PRIMARY KEY,
+
+    cliente_id INTEGER REFERENCES usuarios(id),
+
+    restaurante_id INTEGER REFERENCES restaurantes(id),
+
+    pedido_id INTEGER REFERENCES pedidos(id),
+
+    nota INTEGER,
+
+    comentario TEXT,
+
+    criado_em TIMESTAMP DEFAULT NOW()
+
+);
