@@ -38,4 +38,32 @@ require("./admin/admin.routes");
 app.use(
 "/api/admin",
 adminRoutes
+);const http =
+require("http");
+
+const app =
+require("./app");
+
+
+const server =
+http.createServer(app);
+
+
+
+const socket =
+require("./websocket/socket");
+
+
+socket.iniciarSocket(server);
+
+
+
+server.listen(
+3000,
+()=>{
+
+console.log(
+"FoodJet API online"
 );
+
+});
