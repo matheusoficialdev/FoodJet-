@@ -58,3 +58,14 @@ require("../../websocket/socket");
 
 const EVENTS =
 require("../../websocket/events");
+getIO()
+.to(
+`restaurante_${data.restauranteId}`
+)
+.emit(
+
+EVENTS.NOVO_PEDIDO,
+
+pedido
+
+);
