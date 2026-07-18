@@ -101,7 +101,9 @@ onPressed:(){
 
 },
 
-)
+)import 'package:provider/provider.dart';
+
+import '../../../providers/cart_provider.dart';
 
 ],
 
