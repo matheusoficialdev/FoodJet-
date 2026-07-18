@@ -99,6 +99,37 @@ color:Colors.green
 onPressed:(){
 
 
+Provider.of<CartProvider>(
+
+context,
+
+listen:false
+
+)
+
+.adicionar(produto);
+
+
+
+ScaffoldMessenger.of(context)
+
+.showSnackBar(
+
+SnackBar(
+
+content:
+
+Text(
+
+"${produto.nome} adicionado"
+
+),
+
+),
+
+);
+
+
 },
 
 )import 'package:provider/provider.dart';
